@@ -15,6 +15,7 @@ app.use(cors());
 
 if(2===2){
 	console.log("test1")
+	console.log("test2")
 }
 
 // view engine setup
