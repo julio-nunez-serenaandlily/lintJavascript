@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "lint": "eslint . --ext .js",
+    "lint": "/node_modules/.bin/eslint . --ext .js",
     "pretest": "npm run lint"
   },
   "dependencies": {
