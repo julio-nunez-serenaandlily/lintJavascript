@@ -1,0 +1,44 @@
+{
+  "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module",
+      "ecmaFeatures": {
+          "jsx": true
+      }
+  },
+  "rules": {
+      "space-infix-ops": "error",
+        "comma-spacing" : ["error", { "before": false, "after": true }],
+        "no-irregular-whitespace" : "error",
+        "no-whitespace-before-property" : "error",
+        "curly": [ "error", "all" ],
+        "brace-style": [ "error", "1tbs" ],
+        "no-trailing-spaces":   "error",
+        "keyword-spacing":      "error",
+        "space-before-function-paren": [ "error", "never" ],
+        "spaced-comment":       ["error", "always" ],
+        "vars-on-top":          "off",
+        "no-undef":             "error",
+        "no-undefined":         "error",
+        "comma-dangle":       [ "error", "never" ],
+        "semi":               [ "error", "always" ],
+        "guard-for-in":         "error",
+        "no-eval":              "error",
+        "no-with":              "error",
+        "valid-typeof":         "error",
+        "no-unused-vars":       "error",
+        "no-continue":          "warn",
+        "no-extra-semi":        "warn",
+        "no-unreachable":       "warn",
+        "no-unused-expressions":"warn",
+        "no-magic-numbers":     "warn",
+        "eqeqeq":               "error",
+        "object-curly-spacing": ["error", "always"],
+        "padding-line-between-statements": [
+            "error",
+            { "blankLine": "always", "prev": ["function", "const", "let", "var"], "next": "*"},
+            { "blankLine": "any", "prev": ["const", "let", "var"], "next": ["const", "let", "var"]}
+        ]
+  }
+}
+

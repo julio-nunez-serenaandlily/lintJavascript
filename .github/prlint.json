@@ -1,0 +1,8 @@
+{
+    "title": [
+        {
+          "pattern": "([BESYS])-\\d{1,4}",
+          "message": "Your title needs to be prefixed with the JIRA US"
+        }
+      ]
+}
