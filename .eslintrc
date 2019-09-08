@@ -1,8 +1,5 @@
 {
     "root": true,
-    "plugins": [
-        "suitescript"
-    ],
     "parserOptions": {
         "ecmaVersion": 2017
     },
