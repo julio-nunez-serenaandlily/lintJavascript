@@ -1,13 +1,23 @@
 {
-  "parserOptions": {
-      "ecmaVersion": 6,
-      "sourceType": "module",
-      "ecmaFeatures": {
-          "jsx": true
-      }
-  },
-  "rules": {
-      "space-infix-ops": "error",
+    "root": true,
+    "plugins": [
+        "suitescript"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 2017
+    },
+    "env": {
+        "browser": true,
+        "node": true,
+        "jquery": true,
+        "mocha": true,
+        "amd": true,
+        "suitescript/suitescript1": true,
+        "suitescript/suitescript2": true
+    },
+    "extends": "eslint:recommended",
+    "rules": {
+        "space-infix-ops": "error",
         "comma-spacing" : ["error", { "before": false, "after": true }],
         "no-irregular-whitespace" : "error",
         "no-whitespace-before-property" : "error",
@@ -39,6 +49,5 @@
             { "blankLine": "always", "prev": ["function", "const", "let", "var"], "next": "*"},
             { "blankLine": "any", "prev": ["const", "let", "var"], "next": ["const", "let", "var"]}
         ]
-  }
+    }
 }
-
