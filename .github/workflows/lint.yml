@@ -1,0 +1,12 @@
+name: Pull request to develop
+on: 
+  pull_request:
+    branches:
+      - develop
+
+jobs:
+  build:
+    name: ESLint checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: gimenete/eslint-action@1.0
