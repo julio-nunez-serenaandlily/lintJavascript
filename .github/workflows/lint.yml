@@ -1,8 +1,5 @@
 name: Pull request to develop
-on: 
-  pull_request:
-    branches:
-      - develop
+on: pull_request
 
 jobs:
   build:
