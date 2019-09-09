@@ -7,6 +7,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
+        with:
+          fetch-depth: 1
       # - uses: gimenete/eslint-action@1.0
       - uses: stefanoeb/eslint-action@master
         with:
