@@ -1,13 +1,22 @@
-name: Pull request to develop
+name: Lint
 on: pull_request
 
 jobs:
-  build:
-    name: ESLint checks
+  eslint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      # - uses: gimenete/eslint-action@1.0
-      - uses: stefanoeb/eslint-action@1.0.0
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: rm .yarnclean
+      - run: yarn --frozen-lockfile --ignore-engines --ignore-optional --no-bin-links --non-interactive --silent --ignore-scripts --production=false
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: true
+          HUSKY_SKIP_INSTALL: true
+      - uses: tinovyatkin/action-eslint@v1
+        with:
+          repo-token: ${{secrets.GITHUB_TOKEN}}
+          check-name: eslint
