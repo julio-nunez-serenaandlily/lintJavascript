@@ -1,8 +1,5 @@
 {
     "root": true,
-    "plugins": [
-        "suitescript"
-    ],
     "parserOptions": {
         "ecmaVersion": 2017
     },
@@ -11,9 +8,7 @@
         "node": true,
         "jquery": true,
         "mocha": true,
-        "amd": true,
-        "suitescript/suitescript1": true,
-        "suitescript/suitescript2": true
+        "amd": true
     },
     "extends": "eslint:recommended",
     "rules": {
