@@ -10,6 +10,6 @@ jobs:
       # - uses: gimenete/eslint-action@1.0
       - uses: stefanoeb/eslint-action@master
         with:
-            args: index.js src/**.js
+            args: git diff --cached --name-only --diff-filter=ACM | grep ".jsx\{0,1\}$"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
