@@ -1,17 +1,13 @@
-name: Lint
+name: Pull request to develop
 on: pull_request
 
 jobs:
-  eslint:
+  build:
+    name: ESLint checks
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-        with:
-          fetch-depth: 1
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 12
+      # - uses: gimenete/eslint-action@1.0
       - uses: tinovyatkin/action-eslint@v1
-        with:
-          repo-token: ${{secrets.GITHUB_TOKEN}}
-          check-name: eslint
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
