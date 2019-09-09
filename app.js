@@ -13,7 +13,7 @@ var app = express();
 
 app.use(cors());
 
-if(33==33){
+if (33==33){
 	console.log('test1')
 }
 
