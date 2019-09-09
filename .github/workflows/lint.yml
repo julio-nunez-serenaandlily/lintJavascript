@@ -8,6 +8,6 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       # - uses: gimenete/eslint-action@1.0
-      - uses: xt0rted/eslint-action@master
+      - uses: stefanoeb/eslint-action@1.0.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
