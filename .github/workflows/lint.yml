@@ -10,6 +10,6 @@ jobs:
       # - uses: gimenete/eslint-action@1.0
       - uses: tinovyatkin/action-eslint@v1
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           repo-token: ${{secrets.GITHUB_TOKEN}}
           check-name: eslint
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
